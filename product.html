@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div class="product-page">
+
+    <!-- PRODUCT IMAGE -->
+
+    <img id="product-img"
+    class="product-img">
+
+    <!-- PRODUCT TITLE -->
+
+    <h1 id="product-title"></h1>
+
+    <!-- PRODUCT DESCRIPTION -->
+
+    <p id="product-description"></p>
+
+    <!-- PRODUCT PRICE -->
+
+    <h2 id="product-price"></h2>
+
+    <!-- AVAILABILITY -->
+
+    <h3>
+      Availability:
+      <span style="color:green;">
+      In Stock ✅
+      </span>
+    </h3>
+
+    <!-- ORDER BUTTON -->
+
+    <a id="whatsapp-btn"
+    class="main-btn">
+    Order On WhatsApp
+    </a>
+
+    <br><br>
+
+    <!-- BACK BUTTON -->
+
+    <a href="home.html"
+    class="main-btn">
+    Back To Home
+    </a>
+
+  </div>
+
+  <script>
+
+    // PRODUCTS DATA
+
+    const products = {
+
+      chocolate: {
+
+        title: "Chocolate Cake 🍫",
+
+        price: "₹499",
+
+        description:
+        "Delicious chocolate cake made with premium cocoa and fresh cream.",
+
+        image:
+        "https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1200&auto=format&fit=crop"
+
+      },
+
+      cookies: {
+
+        title: "Fresh Cookies 🍪",
+
+        price: "₹199",
+
+        description:
+        "Crunchy homemade cookies baked fresh daily.",
+
+        image:
+        "https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?q=80&w=1200&auto=format&fit=crop"
+
+      },
+
+      cupcake: {
+
+        title: "Cupcakes 🧁",
+
+        price: "₹299",
+
+        description:
+        "Soft creamy cupcakes available in many delicious flavors.",
+
+        image:
+        "https://images.unsplash.com/photo-1519869325930-281384150729?q=80&w=1200&auto=format&fit=crop"
+
+      },
+
+      donut: {
+
+        title: "Donuts 🍩",
+
+        price: "₹249",
+
+        description:
+        "Fresh sweet donuts topped with chocolate and sprinkles.",
+
+        image:
+        "https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?q=80&w=1200&auto=format&fit=crop"
+
+      },
+
+      bread: {
+
+        title: "Fresh Bread 🍞",
+
+        price: "₹99",
+
+        description:
+        "Soft freshly baked bread prepared every morning.",
+
+        image:
+        "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop"
+
+      },
+
+      pastry: {
+
+        title: "Strawberry Pastry 🍓",
+
+        price: "₹149",
+
+        description:
+        "Fresh strawberry pastry with creamy layers and toppings.",
+
+        image:
+        "https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=1200&auto=format&fit=crop"
+
+      }
+
+    };
+
+    // GET URL PARAMETER
+
+    const params =
+    new URLSearchParams(window.location.search);
+
+    const productName =
+    params.get("product");
+
+    // SELECT PRODUCT
+
+    const product =
+    products[productName];
+
+    // UPDATE PAGE
+
+    document.getElementById("product-title")
+    .innerText = product.title;
+
+    document.getElementById("product-description")
+    .innerText = product.description;
+
+    document.getElementById("product-price")
+    .innerText = product.price;
+
+    document.getElementById("product-img")
+    .src = product.image;
+
+    // WHATSAPP LINK
+
+    document.getElementById("whatsapp-btn")
+    .href =
+    `https://wa.me/919876543210?text=Hello I want to order ${product.title}. Is it available?`;
+
+  </script>
+
+</body>
+
+</html>
