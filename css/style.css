@@ -184,10 +184,6 @@ font-size:20px;
 font-size:40px;
 }
 
-nav{
-display:flex;
-flex-direction:column;
-}
 
 header{
 flex-direction:column;
@@ -381,5 +377,66 @@ align-items:center;
 font-size:30px;
 text-decoration:none;
 z-index:999;
+
+}
+/* =========================
+   MOBILE NAVBAR FIX
+========================= */
+
+@media (max-width:768px){
+
+header{
+
+flex-direction:column;
+padding:15px;
+
+}
+
+.logo-text{
+
+font-size:28px;
+margin-bottom:10px;
+
+}
+
+/* NAVBAR FIX */
+
+nav{
+
+display:flex;
+flex-direction:row !important;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
+width:100%;
+
+}
+
+nav a{
+
+margin:0;
+font-size:14px;
+padding:8px 12px;
+background:rgba(255,255,255,0.15);
+border-radius:8px;
+text-align:center;
+
+}
+
+/* HERO TEXT */
+
+.hero-content h1{
+
+font-size:36px;
+line-height:45px;
+
+}
+
+.hero-content p{
+
+font-size:18px;
+
+}
 
 }
