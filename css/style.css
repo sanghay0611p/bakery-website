@@ -193,3 +193,193 @@ header{
 flex-direction:column;
 }
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+
+  header {
+
+    flex-direction: column;
+    padding: 15px;
+
+  }
+
+nav {
+
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+  nav a {
+
+  margin: 5px;
+  font-size: 15px;
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+
+}
+nav a:hover{
+
+background:#ff69b4;
+transition:0.3s;
+
+}
+
+  /* HERO SECTION */
+
+  .hero {
+
+    height: 70vh;
+    padding: 20px;
+
+  }
+
+  .hero-content h1 {
+
+    font-size: 38px;
+    line-height: 50px;
+
+  }
+
+  .hero-content p {
+
+    font-size: 18px;
+
+  }
+
+  /* BUTTON */
+
+  .main-btn {
+
+    padding: 12px 25px;
+    font-size: 16px;
+
+  }
+
+  /* PRODUCTS */
+
+  .products {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .card {
+
+    margin: auto;
+    width: 95%;
+
+  }
+
+  .card img {
+
+    height: 250px;
+
+  }
+
+  /* GALLERY */
+
+  .gallery-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .gallery-grid img {
+
+    height: 250px;
+
+  }
+
+  /* FEATURES */
+
+  .features {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  /* PRODUCT PAGE */
+
+  .product-page {
+
+    padding: 20px;
+
+  }
+
+  .product-page h1 {
+
+    font-size: 30px;
+
+  }
+
+  .product-img {
+
+    width: 100%;
+
+  }
+
+  /* ABOUT / CONTACT */
+
+  .page-container {
+
+    padding: 20px;
+
+  }
+
+  .page-container h1 {
+
+    font-size: 32px;
+
+  }
+
+  /* WELCOME PAGE */
+
+  .welcome-container h1 {
+
+    font-size: 40px;
+
+  }
+
+  .welcome-container p {
+
+    font-size: 18px;
+
+  }
+
+  .logo {
+
+    width: 90px;
+
+  }
+
+}
+img{
+  max-width:100%;
+}
+.whatsapp-float{
+
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:30px;
+text-decoration:none;
+z-index:999;
+
+}
